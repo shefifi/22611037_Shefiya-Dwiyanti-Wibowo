@@ -10,15 +10,14 @@ st.title('Prediksi Perlakuan Pelanggan')
 # Input data dengan contoh angka valid untuk pengujian
 Age = st.text_input('Age')
 Gender = st.text_input('Gender')
-Marital_Status = st.text_input('Marital_Status')
+Marital_Status = st.text_input('Marital Status')
 Occupation = st.text_input('Occupation')
-Monthly_Income = st.text_input('Monthly_Income')
-Educational_Qualifications = st.text_input('Educational_Qualifications')
-Family_size = st.text_input('Family_size')
+Monthly_Income = st.text_input('Monthly Income')
+Educational_Qualifications = st.text_input('Educational Qualifications')
+Family_size = st.text_input('Family size')
 latitude = st.text_input('latitude')
 longitude = st.text_input('longitude')
-Pin_code = st.text_input('Pin_code')
-Output = st.text_input('Output')
+Pin_code = st.text_input('Pin code')
 Feedback = st.text_input('Feedback')
 
 prediksi_onlinefood = ''
@@ -28,8 +27,8 @@ if st.button('Prediksi'):
     try:
         # Konversi input menjadi numerik
         inputs = np.array([[float(Age), float(Gender), float(Marital_Status), float(Occupation),
-                  float(Monthly_Income), float(Educational_Qualifications), float(Family_size), float(Size),
-                  float(latitude), float(longitude), float(Pin_code), float(Output), float(Feedback)]])
+                  float(Monthly_Income), float(Educational_Qualifications), float(Family_size),
+                  float(latitude), float(longitude), float(Pin_code), float(Feedback)]])
         # Lakukan prediksi
         prediksi = model.predict(inputs)
         
